@@ -1,1 +1,10 @@
 # JAVA-DSA
+// String length count
+class Main {
+    public static void main(String[] args) {
+        String  Charactr = "Hemachandran";
+        int count = Charactr.length();
+        
+        System.out.println("Length of your characr    "    +     count);
+    }
+}
