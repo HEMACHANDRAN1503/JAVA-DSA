@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class Pattern {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int Size = scan.nextInt();
+        for (int i=1;i<=Size;i++){
+            for(int j=1;j<=Size;j++){
+                System.out.print('*');
+            }
+             System.out.println("");
+        }
+        //Made a mistake println should come in first for loop
+    }
+}
