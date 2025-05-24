@@ -1,0 +1,13 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner Scan = new Scanner(System.in);
+        String FN = Scan.next();
+         String LN = Scan.next();
+      int X = Scan.nextInt();
+      String Fullname = FN+LN;
+      for(int i=0;i<X;i++){
+          System.out.println(Fullname);
+      }
+    }
+}
