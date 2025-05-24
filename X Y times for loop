@@ -1,0 +1,11 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner Scan = new Scanner(System.in);
+      int X = Scan.nextInt();
+      int Y = Scan.nextInt();
+      for(int i=0;i<Y;i++){
+          System.out.println(X);
+      }
+    }
+}
