@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner Scan = new Scanner(System.in);
+      int Size = Scan.nextInt();
+      switch(Size){
+          case 30:
+        System.out.println("Medium ");
+        break;
+        case 38:
+         System.out.println("Large");
+         break;
+        case 40 :
+             System.out.println("XL");
+             break;
+             case 42:
+            System.out.println("XXL");
+            break;
+            default:
+             System.out.println("Sorry Size not available ");
+        }
+    }
+}
