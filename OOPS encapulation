@@ -48,3 +48,134 @@ class Main {
         
     }
 }
+
+
+------------------------------------------------------------ADVANCED VERSION OF THIS PROGRAM ----------------------------------------------------------------------
+
+class Student{
+    private String Name;
+    private int Rollno;
+    private int English;
+    private int Math;
+    private int Java;
+    public Student(String Name, int Rollno){
+        this.Name=Name;
+        this.Rollno=Rollno;
+    }
+    public int getEnglishmark(){
+        return English;
+    }
+     public int getJavamark(){
+        return Java;
+    }
+     public int getMathmark(){
+        return Math;
+    }
+    public int setEnglish(int EnglishMark){
+        if( EnglishMark>0&& EnglishMark<=100){
+             English= EnglishMark;
+             return 0;
+        }
+        else{
+            System.out.println("INVALID");
+            return 0;
+        }
+    }
+        public int setMath(int MathMark){
+        if( MathMark>0&& MathMark<=100){
+             Math= MathMark;
+             return 0;
+        }
+        else{
+            System.out.println("INVALID");
+            return 1;
+            }
+        }
+        public int setJava(int JavaMark){
+        if( JavaMark>0&& Java<=100){
+             Java = JavaMark;
+             return 0;
+        }
+        else{
+            System.out.println("INVALID");
+            return 1;
+            }
+        }
+        public void SetEnglish(String Status){
+            if(Status.equalsIgnoreCase("ab")){
+                English = -1;
+            }
+            
+        }
+               public void SetMath(String Status){
+            if(Status.equalsIgnoreCase("ab")){
+                Math = -1;
+            }
+            
+        }
+        public void SetJava(String Status){
+            if(Status.equalsIgnoreCase("ab")){
+                Java = -1 ;
+            }
+            
+        }
+        public void showdetails() {
+            System.out.println("Name"+Name);
+            System.out.println("RollNo"+Rollno);
+            if(English==-1){
+                 System.out.println("EnglishMark"+ "ABSENT");
+            }
+            else{
+                 System.out.println("EnglishMark"+ English);
+            }
+            if(Math==-1){
+                 System.out.println("MathMark"+ "ABSENT");
+            }
+            else{
+                 System.out.println("EnglishMark"+ Math);
+            }
+            if(Java==-1){
+                 System.out.println("JavaMark"+ "ABSENT");
+            }
+            else{
+                 System.out.println("JavaMark"+ Java);
+            }
+            int total = 0, count = 0;
+    if (English != -1)
+    {
+        total += English;
+        count++;
+        }
+    if (Math != -1) {
+        total += Math; 
+        count++;
+        }
+    if (Java != -1) {
+        total +=Java; 
+        count++;
+        }
+        System.out.println("Total: " + total);
+    if (count > 0){
+    
+        System.out.println("Average: " + (total / count));
+        
+    }
+    else{
+        System.out.println("Average: Absent in all subjects");
+    }
+        }
+    }
+             
+           
+
+class Main {
+    public static void main(String[] args) {
+      Student s1= new Student("CHINNU", 59);
+      s1.setEnglish(90);
+      s1.setMath(50);
+      s1.setJava(70);
+      s1.showdetails();
+      
+        
+    }
+}
