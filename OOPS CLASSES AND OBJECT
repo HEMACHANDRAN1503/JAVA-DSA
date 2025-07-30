@@ -1,0 +1,55 @@
+class BankAccount{
+    private String AccountName; 
+    private  String Accounttype;
+    //private  int deposit;
+    private  int AccountNum;
+    private int Balance;
+    //constructor
+    public BankAccount(String AccountName,String Accounttype,int AccountNum){
+        this.AccountName=AccountName;
+        this.Accounttype=Accounttype;
+        this.AccountNum=AccountNum;
+        this.Balance=0;
+    }
+    //deposit
+    public int deposit(int amount){
+        if(amount>500){
+            Balance+=amount;
+            
+            return 1;
+        }
+        else{
+            return 0;
+        }
+    }
+    public int withdraw(int withdrawcash){
+        if( withdrawcash>0&& withdrawcash<=Balance){
+            Balance-= withdrawcash;
+            return 1;
+        
+        }
+        else{
+            return 0;
+        }
+    }
+    public int currentBalance(){
+        return Balance;
+    }
+    public void Accdetails(){
+        System.out.println("AccountName:" +AccountName);
+        System.out.println("Accounttype:" +Accounttype );
+        System.out.println("AccountNum:"+AccountNum);
+        System.out.println("Balance:"+Balance);
+    }
+}
+class Main {
+    public static void main(String[] args) {
+       // System.out.println("Try programiz.pro");
+        
+        BankAccount acc = new BankAccount("Chinnu","Saving", 1999);
+       // System.out.println("");
+       acc.deposit(1000);
+       acc.Accdetails();
+      System.out.println("CurrentBAl:"+ acc.currentBalance());
+    }
+}
