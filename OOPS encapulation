@@ -1,0 +1,50 @@
+class Student{
+    private String StudName;
+    private int Marks;
+    public Student (String StudName,int Marks){
+        this.StudName=StudName;
+        this.Marks=Marks;
+    }
+    public int getmark(){
+        return Marks;
+    }
+    public int setmark(int newmark){
+        if(newmark>=0&&newmark<=100){
+            Marks=newmark;
+             //System.out.println(Marks);
+             return 1;
+             }
+             else{
+                  System.out.println("Invalid");
+                  return 0;
+             }
+    }
+             public void setmark(String status){
+                 if(status.equalsIgnoreCase("ab")){
+                 // System.out.println("ABSENT/RE");
+                  Marks = -1;
+                     
+                 }
+             }
+             public void Showdetails(){
+                 System.out.println("STUDENTNAME:"+StudName);
+                 if(Marks==-1){
+                 System.out.println("STUDENTMARK:"+ "ABESNT");
+                 }
+                 else{
+                     System.out.println("STUDENTMARK:"+ Marks);
+                     
+                 }
+             }
+}
+class Main {
+    public static void main(String[] args) {
+        Student EM = new Student("chinnu",50);
+         Student EM1 = new Student("jishnu",0);
+         EM1.setmark("ab");
+         EM.setmark(99);
+         EM.Showdetails();
+         EM1.Showdetails();
+        
+    }
+}
